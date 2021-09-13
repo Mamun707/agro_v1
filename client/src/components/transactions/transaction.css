@@ -83,10 +83,11 @@
   background: #ffff;
   cursor: pointer;
 }
-.tableData {
-  overflow: scroll;
-}
+
 @media screen and (max-width: 800px) {
+  .tableData {
+    overflow: scroll;
+  }
   .tableData div {
     width: 860px;
   }
