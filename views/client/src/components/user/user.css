@@ -1,0 +1,91 @@
+.userdetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.user-title {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background: #2d2d9a;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.user-title p {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+
+  /* identical to box height */
+  letter-spacing: 0.02em;
+
+  /* White */
+  color: #ffffff;
+  padding-left: 20px;
+}
+.userdetails p {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+
+  /* identical to box height, or 164% */
+ 
+
+  color: #2f2f2f;
+  padding-left: 20px;
+}
+.user-header p {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+
+  /* identical to box height */
+
+
+  /* Primary */
+  color: #2d2d9a;
+  padding-left: 20px;
+}
+.user-add {
+  text-align: right;
+  margin-bottom: 30px;
+}
+.user-add button {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+
+  /* identical to box height */
+  letter-spacing: 0.02em;
+
+  /* Primary */
+  color: #2d2d9a;
+  border: 2px solid #2d2d9a;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  background: #ffff;
+  cursor: pointer;
+}
+.loading{
+  text-align: center;
+  font-size: 100px;
+  color: #2d2d9a;
+  margin-top: 200px;
+}
