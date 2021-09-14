@@ -1,31 +1,25 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import "../transactions/addTransaction.css";
 
-
 import axios from "axios";
-import {BASE_URL}from "../../util/constants"
-
-
+import { BASE_URL } from "../../util/constants";
 
 const AddTransaction = (props) => {
-  const [isLoading,setLoading]=useState(true)
+  const [isLoading, setLoading] = useState(true);
 
-  const createTransaction=async(body)=>{
-    try{
-      setLoading(true)
-      const res = await axios.post(`${BASE_URL}/transaction`,{...body});
-      setLoading(false)
-      props.setTrigger(false)
-      props.load()
-
-
-    }catch(err){
-      console.log(err)
+  const createTransaction = async (body) => {
+    try {
+      setLoading(true);
+      const res = await axios.post(`${BASE_URL}/transaction`, { ...body });
+      setLoading(false);
+      props.setTrigger(false);
+      props.load();
+    } catch (err) {
+      console.log(err);
       // alert("Something went wrong")
     }
-  }
-
+  };
 
   const {
     register,
@@ -34,7 +28,7 @@ const AddTransaction = (props) => {
     reset,
   } = useForm();
   const onSubmit = (data, e) => {
-    createTransaction(data)
+    createTransaction(data);
   };
   console.log(errors);
   return (
@@ -152,7 +146,11 @@ const AddTransaction = (props) => {
               />
             </div>
             <div className="add-submit">
-              <input type="submit" className="outline" value={(isLoading?"saving...":"save")}  />
+              <input
+                type="submit"
+                className="outline"
+                value={isLoading ? "saving..." : "save"}
+              />
             </div>
           </div>
         </div>

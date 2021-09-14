@@ -2,8 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "./addland.css";
 import axios from "axios";
-import {BASE_URL}from "../../util/constants"
-
+import { BASE_URL } from "../../util/constants";
 
 const AddLand = (props) => {
   const {
@@ -11,16 +10,15 @@ const AddLand = (props) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = async(data, e) => {
-    try{
-      const res = await axios.post(`${BASE_URL}/lands`,data);
-      alert("Thank you, your user has been created")
-      
-      props.loadData() 
-     }catch(err){
-       alert(err.response.data.message)
-     }
+  const onSubmit = async (data, e) => {
+    try {
+      const res = await axios.post(`${BASE_URL}/lands`, data);
+      alert("Thank you, your user has been created");
 
+      props.loadData();
+    } catch (err) {
+      alert(err.response.data.message);
+    }
 
     // console.log(data);
     // e.target.reset();
@@ -75,7 +73,7 @@ const AddLand = (props) => {
           <div>
             <label>Start Date</label>
             <input
-              type="datetime"
+              type="date"
               placeholder="dd/mm/yy"
               {...register("startTime", { required: true })}
               className="outline"
@@ -83,9 +81,9 @@ const AddLand = (props) => {
             />
           </div>
           <div>
-            <label>Due Date</label>
+            <label>End Date</label>
             <input
-              type="datetime"
+              type="date"
               placeholder="dd/mm/yy"
               {...register("endDate", { required: true })}
               className="outline"

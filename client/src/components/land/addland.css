@@ -52,7 +52,7 @@
   margin-bottom: 15px;
   width: 100%;
 }
-.add-land input[type="datetime"] {
+.add-land input[type="date"] {
   border: 1.5px solid rgba(99, 99, 99, 0.25);
   box-sizing: border-box;
   border-radius: 20px;
