@@ -188,5 +188,21 @@
   .add-transaction {
     grid-template-columns: 1fr;
     overflow: scroll;
+    grid-gap: 0;
+  }
+  .add-transaction input[type="text"] {
+    margin-bottom: 5px;
+  }
+  .add-transaction select {
+    margin-bottom: 5px;
+  }
+  .add-transaction input[type="tel"] {
+    margin-bottom: 5px;
+  }
+  .add-reset {
+    margin-top: 15px;
+  }
+  .add-submit {
+    margin-top: 15px;
   }
 }
