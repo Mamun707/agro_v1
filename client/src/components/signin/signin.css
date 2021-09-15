@@ -37,7 +37,6 @@
   width: 100%;
 }
 
-
 ::placeholder {
   font-family: "Lato", sans-serif;
   font-style: normal;
@@ -47,12 +46,11 @@
 
   color: #636363;
 }
-.password-eye{
+.password-eye {
   border: 1.5px solid rgba(99, 99, 99, 0.25);
   box-sizing: border-box;
   border-radius: 20px;
   display: flex;
-
 }
 .signin-password input[type="text"] {
   /* border: 1.5px solid rgba(99, 99, 99, 0.25);
@@ -65,14 +63,18 @@
   border: none;
 }
 .signin-password input[type="password"] {
-  
+  /* padding: 10px;
+ 
+  width: 100%;
+  border: none; */
   padding: 10px;
-  /* margin-top: 5px;
-  margin-bottom: 15px; */
+  margin-top: 5px;
+  margin-bottom: 15px;
   width: 100%;
   border: none;
+  background: none;
 }
-.i-icon{
+.i-icon {
   margin-top: 10px;
   margin-right: 10px;
 }
@@ -121,11 +123,11 @@
 
   color: #111111;
 }
-@media only screen and (max-width:800px){
+@media only screen and (max-width: 800px) {
   .sigin-frame {
     margin-top: 40%;
-}
-.signin-menu{
-  width: 80%;
-}
+  }
+  .signin-menu {
+    width: 80%;
+  }
 }
