@@ -149,7 +149,7 @@ const AddTransaction = (props) => {
               <input
                 type="submit"
                 className="outline"
-                value={isLoading ? "saving..." : "save"}
+                value={isLoading ? "save" : "saving..."}
               />
             </div>
           </div>
