@@ -16,7 +16,7 @@ const cors =require("cors");
 
 const mongoose =require("mongoose");
 
-app.use(cors());
+app.use(cors())
 
 
 // view engine setup
@@ -28,8 +28,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'client')));
-
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

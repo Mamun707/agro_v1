@@ -1,3 +1,4 @@
+
 //Transcation Model
 const TransactionModel = require("../models/transaction")
 
@@ -69,15 +70,24 @@ const getReports=async(req, res, next)=> {
 
         let finalOutput=[];
 
-        console.log(data)
+        for(let item of data){
+            console.log(item)
+            let totalDebit=item.total.find(item=>item.type==="outward")
+            let totalCredit=item.total.find(item=>item.type==="inward");
 
-        data.map(item=>{
+            console.log(totalDebit,totalCredit)
 
-            let totalDebit=(item.total?item.total.find(item=>item.type==="inward"):0)
-            let totalCredit=(item.total?item.total.find(item=>item.type==="inward"):0)
-
+            if(totalCredit===undefined){
+                totalCredit={
+                    value:0
+                }
+            }
+            if(totalDebit===undefined){
+                totalDebit={
+                    value:0
+                }
+            }
            
-
             let body={
                 "category":item._id,
                 "totalCredit":totalCredit.value,
@@ -85,7 +95,9 @@ const getReports=async(req, res, next)=> {
                 "totlProfit": (totalCredit.value-totalDebit.value)
             }
             finalOutput.push(body)
-        })
+        }
+
+      
 
 
 

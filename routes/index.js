@@ -1,12 +1,11 @@
 var express = require('express');
 var router = express.Router();
-const User = require("../models/user");
-var path = require('path');
-
+const User = require("../models/user")
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  console.log(req.subdomains)
+  res.render('index', { title: 'Express' });
 });
 
 router.post('/login', async function(req, res, next) {
